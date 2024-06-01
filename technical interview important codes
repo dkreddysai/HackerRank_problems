@@ -1,0 +1,620 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP39tGnMvOUZZ06n9rizF4o",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dkreddysai/HackerRank_problems/blob/main/technical%20interview%20important%20codes\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bwpNEAgW8lgl",
+        "outputId": "edd83759-6e3c-423d-b0f5-a4ef0c86a502"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(20, 10)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "def swaptwonumbers(a,b):\n",
+        "  temp=a\n",
+        "  a=b\n",
+        "  b=temp\n",
+        "  return a,b\n",
+        "a=10\n",
+        "b=20\n",
+        "swaptwonumbers(a,b)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def reverseanumber(num):\n",
+        "  a=str(num)\n",
+        "  str_rev=a[::-1]\n",
+        "  num_rev=int(str_rev)\n",
+        "  return num_rev\n",
+        "num=1234\n",
+        "reverseanumber(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FSwgA-RY9l1g",
+        "outputId": "4ff63678-075d-4e9d-888f-7ba448e534d4"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4321"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def reverseastring(s):\n",
+        "  return s[::-1]\n",
+        "s=\"ABCD\"\n",
+        "reversed_s = reverseastring(s)\n",
+        "print(reversed_s)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OXgSo18Z_c_F",
+        "outputId": "c1ac9f0d-7ec7-428d-bb68-7279bd6ac9a3"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "DCBA\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fibonacci(n):\n",
+        "  last_pre_term=0\n",
+        "  last_term=1\n",
+        "  series=[]\n",
+        "  for i in range(n):\n",
+        "    series.append(last_pre_term)\n",
+        "    n=last_pre_term+last_term\n",
+        "    last_pre_term=last_term\n",
+        "    last_term=n\n",
+        "  return series\n",
+        "print(fibonacci(10))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lYo6fVjkBXpF",
+        "outputId": "1a1b7de8-83cc-4905-8cbc-71e9cdf7b96d"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def numberpalindrome(num):\n",
+        "  if num<0:\n",
+        "    return False\n",
+        "   # Numbers ending in 0 are not palindromes unless the number is 0 itself\n",
+        "  if num%10==0 and num!=0:\n",
+        "    return False\n",
+        "  a=str(num)\n",
+        "  b=a[::-1]\n",
+        "  reverse_number=int(b)\n",
+        "  if num==reverse_number:\n",
+        "    print(num,\" -is a palindrome\")\n",
+        "  else:\n",
+        "    print(num,\" -is not a palindrome\")\n",
+        "num=int(input(\"enter a number:\"))\n",
+        "numberpalindrome(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OKpX7Cycjykn",
+        "outputId": "5b25ae32-50d2-4139-a29a-c5f26e73f286"
+      },
+      "execution_count": 77,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter a number:0\n",
+            "0  -is a palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def numberpalindrome(s):\n",
+        "  return s==s[::-1]\n",
+        "s=\"DAD\"\n",
+        "numberpalindrome(s)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8rM9HbwDpRmp",
+        "outputId": "1e09a0cb-594a-40a2-be5f-6e5cf79d0664"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#prime number is factors of 1 and itself.\n",
+        "def is_prime(n):\n",
+        "    for i in range(2, n):\n",
+        "        if n % i == 0:\n",
+        "            return False\n",
+        "    return True\n",
+        "\n",
+        "def primenumbers(n):\n",
+        "    if is_prime(n):\n",
+        "        print(f\"{n} is a prime number\")\n",
+        "    else:\n",
+        "        print(f\"{n} is not a prime number\")\n",
+        "\n",
+        "primenumbers(2)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Qrq4lS2DqvPS",
+        "outputId": "5470f6c4-34ca-4295-ca52-d5d2ecf0df96"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2 is a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def is_prime(n):\n",
+        "    for i in range(2, n):\n",
+        "        if n % i == 0:\n",
+        "            return False\n",
+        "    return True\n",
+        "\n",
+        "def primenumbers(start,end):\n",
+        "  primes=[]\n",
+        "  for i in range(start,end+1):\n",
+        "    if is_prime(i):\n",
+        "        primes.append(i)\n",
+        "  return primes\n",
+        "\n",
+        "primenumbers(2,10)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "enDm_UIO1Wrs",
+        "outputId": "08a0a4d5-d40c-4c3e-cb13-7bed5a67150d"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2, 3, 5, 7]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def countwords(str1):\n",
+        "  return len(str1.split())\n",
+        "str1=\"work hard\"\n",
+        "countwords(str1)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b-2QjgdN2tTC",
+        "outputId": "8437c8cc-12e7-4ff9-e760-a61735841719"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 51
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def countwords(str1):\n",
+        "  return len(str1)\n",
+        "str1=\"work hard\"\n",
+        "countwords(str1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cbDJX6ha3t_L",
+        "outputId": "d1f74f43-1663-42c8-b04d-2568fb573f2b"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 52
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def subarrays(arr,target):\n",
+        "  subarrays=[]\n",
+        "\n",
+        "  for i in range(len(arr)):\n",
+        "    current_sum=0\n",
+        "    for j in range(i,len(arr)):\n",
+        "      current_sum+=arr[j]\n",
+        "      if current_sum==target:\n",
+        "        subarrays.append(arr[i:j+1])\n",
+        "  return subarrays\n",
+        "arr = [3, 4, -7, 1, 3, 3, 1, -4]\n",
+        "target = 7\n",
+        "subarrays(arr,target)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "na8O4CSb7BdP",
+        "outputId": "1748aa66-411d-4031-ba5c-0a9cf149f8d6"
+      },
+      "execution_count": 73,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[[3, 4], [3, 4, -7, 1, 3, 3], [1, 3, 3], [3, 3, 1]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 73
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def zerostoend(arr):\n",
+        "    nonzeros=[]\n",
+        "    zeros_count=0\n",
+        "    for i in arr:\n",
+        "        if i!=0:\n",
+        "            nonzeros.append(i)\n",
+        "        else:\n",
+        "            zeros_count+=1\n",
+        "    nonzeros.sort()\n",
+        "    nonzeros.extend([0]*zeros_count)\n",
+        "    return nonzeros\n",
+        "arr=[0,8,2,0,0,3,4,0]\n",
+        "zerostoend(arr)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1ryl_3J6A5J7",
+        "outputId": "b49a3d4b-6da4-4df7-f6bb-c5f663dd4059"
+      },
+      "execution_count": 68,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2, 3, 4, 8, 0, 0, 0, 0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 68
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "arr=[10,2,7,4]\n",
+        "n=len(arr)\n",
+        "result=sorted(arr)\n",
+        "print(result[n-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yB-LyWwVHd8U",
+        "outputId": "79878451-2624-4135-8603-0835506edead"
+      },
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Factorial of a number\n",
+        "def factorial(n):\n",
+        "  fact=1\n",
+        "  for i in range(1,n+1):\n",
+        "    fact=fact*i\n",
+        "  return fact\n",
+        "factorial(5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YzjQk1GDUw0E",
+        "outputId": "37736ad9-0ed9-430d-9eaf-2044ced34337"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "120"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 86
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def numofdigits(num):\n",
+        "  str1=len(str(abs(num)))\n",
+        "  a=f\"No of digits are = {str1}\"\n",
+        "  return a\n",
+        "num=1234\n",
+        "numofdigits(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "no9ZhdGOWQ5x",
+        "outputId": "7fa68b29-c9d4-4b49-e84a-1205b488e3d6"
+      },
+      "execution_count": 96,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'No of digits are = 4'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 96
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def armstrong(num):\n",
+        "  str1=str(num)\n",
+        "  num_digits=len(str1)\n",
+        "  count=0\n",
+        "  for i in str1:\n",
+        "    count+=int(i)**num_digits     # each number can be power of number of digits present in given number.\n",
+        "  if count==num:\n",
+        "    print(num,\" is Armstrong number\")\n",
+        "  else:\n",
+        "    print(num,\" is Not Armstrong number\")\n",
+        "armstrong(153)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vJfoZeqOnlns",
+        "outputId": "81e97100-e30d-454a-f900-7e3d3e5cc800"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "153  is Armstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def armstrong(num):\n",
+        "  str1=str(num)\n",
+        "  num_digits=len(str1)\n",
+        "  count=0\n",
+        "  for i in str1:\n",
+        "    count+=int(i)**num_digits\n",
+        "  return count==num\n",
+        "armstrong(9474)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WPVpPNWXsB4m",
+        "outputId": "6ca1867d-e049-48f9-975a-fc25570f6ae2"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def evenorodd(num):\n",
+        "    if num%2==0:\n",
+        "      print(\"given number is Even\")\n",
+        "    else:\n",
+        "      print(\"given number is odd\")\n",
+        "evenorodd(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MH2Q6_V-uRKV",
+        "outputId": "289fd141-7056-4095-8d6c-8f36839ae6d2"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "given number is odd\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
